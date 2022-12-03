@@ -61,3 +61,12 @@ jobs:
           app-name: 'cornix-bot'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D925F1CA9A8640DAB968B4A44F64C7F5 }}
+
+      - name: 'Deploy to Azure Web App slot 2'
+        uses: azure/webapps-deploy@v2
+        id: deploy-to-webapp
+        with:
+          app-name: 'cornix-bot'
+          slot-name: 'second'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D925F1CA9A8640DAB968B4A44F64C7F5 }}
+
