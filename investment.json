@@ -1,0 +1,102 @@
+[
+{
+    "model": "investment.rio",
+    "pk": 1,
+    "fields": {
+        "percentage": 15,
+        "duration": "Daily"
+    }
+},
+{
+    "model": "investment.rio",
+    "pk": 2,
+    "fields": {
+        "percentage": 25,
+        "duration": "Daily"
+    }
+},
+{
+    "model": "investment.rio",
+    "pk": 3,
+    "fields": {
+        "percentage": 40,
+        "duration": "Daily"
+    }
+},
+{
+    "model": "investment.rio",
+    "pk": 4,
+    "fields": {
+        "percentage": 55,
+        "duration": "Daily"
+    }
+},
+{
+    "model": "investment.rio",
+    "pk": 5,
+    "fields": {
+        "percentage": 80,
+        "duration": "Daily"
+    }
+},
+{
+    "model": "investment.investmentplan",
+    "pk": 1,
+    "fields": {
+        "name": "level one",
+        "description": "This is a sample level of investment",
+        "rio": 1,
+        "range_amt": "$2,000 -  $14,999",
+        "created_at": "2022-07-09T01:34:33.789Z",
+        "updated_at": "2022-07-09T01:34:33.789Z"
+    }
+},
+{
+    "model": "investment.investmentplan",
+    "pk": 2,
+    "fields": {
+        "name": "level two",
+        "description": "This is a sample level two plan",
+        "rio": 2,
+        "range_amt": "$15,000 -  $49,999",
+        "created_at": "2022-07-09T01:35:51.816Z",
+        "updated_at": "2022-07-09T01:35:51.816Z"
+    }
+},
+{
+    "model": "investment.investmentplan",
+    "pk": 3,
+    "fields": {
+        "name": "level three",
+        "description": "This is a sample level three plan",
+        "rio": 3,
+        "range_amt": "$50,000 -  $499,999",
+        "created_at": "2022-07-09T01:37:31.965Z",
+        "updated_at": "2022-07-09T01:37:31.965Z"
+    }
+},
+{
+    "model": "investment.investmentplan",
+    "pk": 4,
+    "fields": {
+        "name": "level four",
+        "description": "This is a sample level four plan",
+        "rio": 4,
+        "range_amt": "$500,000 -  $4,999,999",
+        "created_at": "2022-07-09T01:38:49.181Z",
+        "updated_at": "2022-07-09T01:38:49.181Z"
+    }
+},
+{
+    "model": "investment.investmentplan",
+    "pk": 5,
+    "fields": {
+        "name": "level five",
+        "description": "This is a level five plan",
+        "rio": 5,
+        "range_amt": "$5,000,000 -  $1,000,000,000",
+        "created_at": "2022-07-09T01:39:59.009Z",
+        "updated_at": "2022-07-09T01:39:59.009Z"
+    }
+}
+]

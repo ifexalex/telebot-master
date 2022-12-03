@@ -1,0 +1,1667 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2022-07-12T10:57:51.530Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "22",
+        "object_repr": "ifexalex : 123456",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2022-07-12T15:53:19.411Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "23",
+        "object_repr": "ifexalex : 123456",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2022-07-12T17:07:19.542Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "25",
+        "object_repr": "ifexalex : 123456",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2022-07-12T17:10:58.781Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "24",
+        "object_repr": "ifexalex : 123456",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2022-07-12T17:15:20.102Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "26",
+        "object_repr": "ifexalex : 123456",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2022-07-12T17:18:04.321Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "27",
+        "object_repr": "ifexalex : 123456",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2022-07-12T17:23:41.802Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "28",
+        "object_repr": " : 123456",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2022-07-12T17:25:41.964Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "29",
+        "object_repr": " : 123456",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2022-07-12T17:36:25.519Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "30",
+        "object_repr": "ifexalex : 123456",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2022-07-12T17:36:37.154Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "20",
+        "object_repr": " : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2022-07-12T17:36:44.727Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "21",
+        "object_repr": "ksdjkwe : kwjeweo",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2022-07-12T17:36:44.733Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "19",
+        "object_repr": "wej : Ek",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2022-07-12T17:36:44.735Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "18",
+        "object_repr": " : wlrko",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2022-07-12T17:36:44.736Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "17",
+        "object_repr": " : wlkwuej",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2022-07-12T17:36:44.737Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "16",
+        "object_repr": " : wlkwuej",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2022-07-12T17:36:44.738Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "15",
+        "object_repr": " : strhreth4",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2022-07-12T17:36:44.739Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "14",
+        "object_repr": " : ekfjkj",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2022-07-12T21:52:49.739Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "31",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2022-07-13T23:57:31.095Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "1",
+        "object_repr": "BNB Chain (BEP20)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2022-07-13T23:58:13.492Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "3",
+        "object_repr": "Tron (TRC20)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2022-07-17T22:53:34.872Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "BNB Wallet",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2022-07-17T22:54:37.487Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "USDT Wallet",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2022-07-17T22:55:52.661Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "BNB Wallet",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2022-07-17T22:58:09.811Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "USDT Wallet 2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2022-07-17T22:58:20.946Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "USDT Wallet 1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2022-07-17T22:58:52.555Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "USDT Wallet 2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Cryptocurrency\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2022-07-22T17:51:52.291Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "33",
+        "object_repr": "None : 1810862739",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2022-07-22T17:51:52.299Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "32",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2022-07-22T19:09:19.499Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "34",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2022-07-22T19:18:32.042Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "35",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2022-07-22T22:10:06.046Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "36",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2022-07-22T22:18:39.362Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "5",
+        "object_repr": "malaRam",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2022-07-22T22:20:38.251Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "3",
+        "object_repr": "BNB 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2022-07-22T22:23:14.345Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Basic",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2022-07-23T00:52:29.239Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "37",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2022-07-23T00:58:00.547Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "39",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2022-07-23T01:03:21.324Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "40",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2022-07-23T01:04:20.433Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "41",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2022-07-24T01:09:40.080Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "42",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2022-07-24T01:26:21.319Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "44",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2022-07-24T01:49:10.530Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "45",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2022-07-24T01:58:34.554Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "46",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2022-07-24T02:07:36.909Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "47",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2022-07-24T02:17:51.950Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "48",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2022-07-24T02:23:01.551Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "49",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2022-07-24T02:27:09.359Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "50",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2022-07-24T02:31:55.371Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "51",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2022-07-26T22:23:05.131Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "52",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2022-07-26T22:27:59.566Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "53",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2022-07-26T22:50:35.994Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "54",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2022-07-26T22:59:05.395Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "55",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2022-07-26T23:10:00.537Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "56",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2022-07-26T23:46:45.832Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "59",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2022-07-27T08:27:18.142Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "38",
+        "object_repr": "Malachychidera : 662403079",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2022-07-28T12:25:04.344Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "66",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2022-07-28T12:26:12.686Z",
+        "user": 1,
+        "content_type": 12,
+        "object_id": "67",
+        "object_repr": "Alexis_xanda : 698485392",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add Rio",
+        "content_type": 7,
+        "codename": "add_rio"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change Rio",
+        "content_type": 7,
+        "codename": "change_rio"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete Rio",
+        "content_type": 7,
+        "codename": "delete_rio"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view Rio",
+        "content_type": 7,
+        "codename": "view_rio"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add Investment Plan",
+        "content_type": 8,
+        "codename": "add_investmentplan"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change Investment Plan",
+        "content_type": 8,
+        "codename": "change_investmentplan"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete Investment Plan",
+        "content_type": 8,
+        "codename": "delete_investmentplan"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view Investment Plan",
+        "content_type": 8,
+        "codename": "view_investmentplan"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add Crypto Currency",
+        "content_type": 9,
+        "codename": "add_cryptocurrency"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change Crypto Currency",
+        "content_type": 9,
+        "codename": "change_cryptocurrency"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete Crypto Currency",
+        "content_type": 9,
+        "codename": "delete_cryptocurrency"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view Crypto Currency",
+        "content_type": 9,
+        "codename": "view_cryptocurrency"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add Wallet",
+        "content_type": 10,
+        "codename": "add_wallets"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change Wallet",
+        "content_type": 10,
+        "codename": "change_wallets"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete Wallet",
+        "content_type": 10,
+        "codename": "delete_wallets"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view Wallet",
+        "content_type": 10,
+        "codename": "view_wallets"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add Crypto Network",
+        "content_type": 11,
+        "codename": "add_cryptonetwork"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change Crypto Network",
+        "content_type": 11,
+        "codename": "change_cryptonetwork"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete Crypto Network",
+        "content_type": 11,
+        "codename": "delete_cryptonetwork"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view Crypto Network",
+        "content_type": 11,
+        "codename": "view_cryptonetwork"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add telegram user",
+        "content_type": 12,
+        "codename": "add_telegramuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change telegram user",
+        "content_type": 12,
+        "codename": "change_telegramuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete telegram user",
+        "content_type": 12,
+        "codename": "delete_telegramuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view telegram user",
+        "content_type": 12,
+        "codename": "view_telegramuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add Bot",
+        "content_type": 13,
+        "codename": "add_bot"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change Bot",
+        "content_type": 13,
+        "codename": "change_bot"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete Bot",
+        "content_type": 13,
+        "codename": "delete_bot"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view Bot",
+        "content_type": 13,
+        "codename": "view_bot"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add telegram user message",
+        "content_type": 14,
+        "codename": "add_telegramusermessage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change telegram user message",
+        "content_type": 14,
+        "codename": "change_telegramusermessage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete telegram user message",
+        "content_type": 14,
+        "codename": "delete_telegramusermessage"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view telegram user message",
+        "content_type": 14,
+        "codename": "view_telegramusermessage"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$S1ZVo6nF2GA9D0pHS5s42w$N9CvLaC8G2jfy4v361kPcc3i1OokboVsAKISAclGS1k=",
+        "last_login": "2022-07-22T17:51:39.524Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-07-11T21:50:09.955Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "investment",
+        "model": "rio"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "investment",
+        "model": "investmentplan"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "crypto",
+        "model": "cryptocurrency"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "crypto",
+        "model": "wallets"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "crypto",
+        "model": "cryptonetwork"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "account",
+        "model": "telegramuser"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "bot",
+        "model": "bot"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "account",
+        "model": "telegramusermessage"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ed5sz1uuzw6rdf2jkl2ijr3bpn1fae9j",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSHDG1y69xsIDINUDU1KuzL-uzbpQrf3nHNfLKZtbXEbtMSpsDMT7PS75YQP6jso99RvM8e5r8uU-a7wgw5-nQs9L4f7d9DSaN86g7DSKQqFDKD0gNaBNwF09lLbbBMqj44k2IqkrNBVSjBQMShXc2HvD76qNzw:1oD7k2:tiPGSqxs1dX0sozYmcn2PBVdHxWtvFlzySpyPRSTZic",
+        "expire_date": "2022-07-31T17:07:38.002Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "g9fc3jec400s110ms93mabnac6nuu1wb",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSHDG1y69xsIDINUDU1KuzL-uzbpQrf3nHNfLKZtbXEbtMSpsDMT7PS75YQP6jso99RvM8e5r8uU-a7wgw5-nQs9L4f7d9DSaN86g7DSKQqFDKD0gNaBNwF09lLbbBMqj44k2IqkrNBVSjBQMShXc2HvD76qNzw:1oB1IV:Kg-2GTigKXiBydAkcP1_ge_VPQvCKIhjSej5B6gtwNc",
+        "expire_date": "2022-07-25T21:50:31.736Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "n4cf7ysbzei6uai5ox3avjcv2gxgiytw",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSHDG1y69xsIDINUDU1KuzL-uzbpQrf3nHNfLKZtbXEbtMSpsDMT7PS75YQP6jso99RvM8e5r8uU-a7wgw5-nQs9L4f7d9DSaN86g7DSKQqFDKD0gNaBNwF09lLbbBMqj44k2IqkrNBVSjBQMShXc2HvD76qNzw:1oC15D:nvsvlV_p78lsGaH4ngXQef6QDwsoA-oRzMwIYC6MulQ",
+        "expire_date": "2022-07-28T15:48:55.857Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "s86jigb83s4yqei4obcrodqel41g34ha",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSHDG1y69xsIDINUDU1KuzL-uzbpQrf3nHNfLKZtbXEbtMSpsDMT7PS75YQP6jso99RvM8e5r8uU-a7wgw5-nQs9L4f7d9DSaN86g7DSKQqFDKD0gNaBNwF09lLbbBMqj44k2IqkrNBVSjBQMShXc2HvD76qNzw:1oBlhR:mZED07Jg-h-hEBhrqT3fcPP1UaeLFbYTLQDir3MX9Kc",
+        "expire_date": "2022-07-27T23:23:21.077Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "sx1rbkrfcimbiprdhbj355bpde17p186",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSHDG1y69xsIDINUDU1KuzL-uzbpQrf3nHNfLKZtbXEbtMSpsDMT7PS75YQP6jso99RvM8e5r8uU-a7wgw5-nQs9L4f7d9DSaN86g7DSKQqFDKD0gNaBNwF09lLbbBMqj44k2IqkrNBVSjBQMShXc2HvD76qNzw:1oEwoN:yFih5EHWuDY4xx3tiOmgdjoQ8hcd95N_tdota4KEnfI",
+        "expire_date": "2022-08-05T17:51:39.527Z"
+    }
+},
+{
+    "model": "investment.rio",
+    "pk": 1,
+    "fields": {
+        "percentage": 15,
+        "duration": "Daily"
+    }
+},
+{
+    "model": "investment.rio",
+    "pk": 2,
+    "fields": {
+        "percentage": 25,
+        "duration": "Daily"
+    }
+},
+{
+    "model": "investment.rio",
+    "pk": 3,
+    "fields": {
+        "percentage": 40,
+        "duration": "Daily"
+    }
+},
+{
+    "model": "investment.rio",
+    "pk": 4,
+    "fields": {
+        "percentage": 55,
+        "duration": "Daily"
+    }
+},
+{
+    "model": "investment.rio",
+    "pk": 5,
+    "fields": {
+        "percentage": 80,
+        "duration": "Daily"
+    }
+},
+{
+    "model": "investment.investmentplan",
+    "pk": 1,
+    "fields": {
+        "name": "Basic",
+        "description": "This is a sample level of investment",
+        "rio": 1,
+        "range_amt": "$2,000 -  $14,999",
+        "created_at": "2022-07-09T01:34:33.789Z",
+        "updated_at": "2022-07-22T22:23:14.344Z"
+    }
+},
+{
+    "model": "investment.investmentplan",
+    "pk": 2,
+    "fields": {
+        "name": "level two",
+        "description": "This is a sample level two plan",
+        "rio": 2,
+        "range_amt": "$15,000 -  $49,999",
+        "created_at": "2022-07-09T01:35:51.816Z",
+        "updated_at": "2022-07-09T01:35:51.816Z"
+    }
+},
+{
+    "model": "investment.investmentplan",
+    "pk": 3,
+    "fields": {
+        "name": "level three",
+        "description": "This is a sample level three plan",
+        "rio": 3,
+        "range_amt": "$50,000 -  $499,999",
+        "created_at": "2022-07-09T01:37:31.965Z",
+        "updated_at": "2022-07-09T01:37:31.965Z"
+    }
+},
+{
+    "model": "investment.investmentplan",
+    "pk": 4,
+    "fields": {
+        "name": "level four",
+        "description": "This is a sample level four plan",
+        "rio": 4,
+        "range_amt": "$500,000 -  $4,999,999",
+        "created_at": "2022-07-09T01:38:49.181Z",
+        "updated_at": "2022-07-09T01:38:49.181Z"
+    }
+},
+{
+    "model": "investment.investmentplan",
+    "pk": 5,
+    "fields": {
+        "name": "level five",
+        "description": "This is a level five plan",
+        "rio": 5,
+        "range_amt": "$5,000,000 -  $1,000,000,000",
+        "created_at": "2022-07-09T01:39:59.009Z",
+        "updated_at": "2022-07-09T01:39:59.009Z"
+    }
+},
+{
+    "model": "crypto.cryptonetwork",
+    "pk": 1,
+    "fields": {
+        "name": "BNB Chain (BEP20)"
+    }
+},
+{
+    "model": "crypto.cryptonetwork",
+    "pk": 2,
+    "fields": {
+        "name": "Ethereum (ERC20)"
+    }
+},
+{
+    "model": "crypto.cryptonetwork",
+    "pk": 3,
+    "fields": {
+        "name": "Tron (TRC20)"
+    }
+},
+{
+    "model": "crypto.cryptocurrency",
+    "pk": 1,
+    "fields": {
+        "name": "Bitcoin",
+        "symbol": "BTC"
+    }
+},
+{
+    "model": "crypto.cryptocurrency",
+    "pk": 2,
+    "fields": {
+        "name": "Binance Coin",
+        "symbol": "BNB"
+    }
+},
+{
+    "model": "crypto.cryptocurrency",
+    "pk": 3,
+    "fields": {
+        "name": "Ethereum",
+        "symbol": "ETH"
+    }
+},
+{
+    "model": "crypto.cryptocurrency",
+    "pk": 4,
+    "fields": {
+        "name": "Tether",
+        "symbol": "USDT"
+    }
+},
+{
+    "model": "crypto.cryptocurrency",
+    "pk": 5,
+    "fields": {
+        "name": "malaRam",
+        "symbol": "MALM"
+    }
+},
+{
+    "model": "crypto.wallets",
+    "pk": 1,
+    "fields": {
+        "name": "USDT Wallet 1",
+        "address": "THG33G6ysUHErXpFCY5WFRdXCqXKkD4gz6",
+        "cryptocurrency": 4,
+        "network": 3
+    }
+},
+{
+    "model": "crypto.wallets",
+    "pk": 2,
+    "fields": {
+        "name": "USDT Wallet 2",
+        "address": "0x13fa85b7dd801bd863534c7df0337114c569587a",
+        "cryptocurrency": 4,
+        "network": 1
+    }
+},
+{
+    "model": "crypto.wallets",
+    "pk": 3,
+    "fields": {
+        "name": "BNB 1",
+        "address": "0x13fa85b7dd801bd863534c7df0337114c569587a",
+        "cryptocurrency": 2,
+        "network": 1
+    }
+},
+{
+    "model": "account.telegramuser",
+    "pk": 43,
+    "fields": {
+        "username": "None",
+        "chat_id": "5383849266",
+        "fullname": "Abel chidubem",
+        "address": null,
+        "country": null,
+        "phone": null,
+        "email": null,
+        "message_id": "[\"2961\", \"3897\"]",
+        "bot_message_id": "[\"3897\"]",
+        "crypto_address": null,
+        "is_active": true,
+        "date_added": "2022-07-23T23:45:50.637Z"
+    }
+},
+{
+    "model": "account.telegramuser",
+    "pk": 64,
+    "fields": {
+        "username": "geffhaddy",
+        "chat_id": "5336898327",
+        "fullname": "*",
+        "address": null,
+        "country": null,
+        "phone": null,
+        "email": null,
+        "message_id": "[\"3907\"]",
+        "bot_message_id": "[]",
+        "crypto_address": null,
+        "is_active": true,
+        "date_added": "2022-07-27T09:26:10.243Z"
+    }
+},
+{
+    "model": "account.telegramuser",
+    "pk": 65,
+    "fields": {
+        "username": "ascrypto_trades",
+        "chat_id": "5258813046",
+        "fullname": "Alan Santana",
+        "address": null,
+        "country": null,
+        "phone": null,
+        "email": null,
+        "message_id": "[\"3908\", \"3910\", \"3911\", \"3909\", \"3912\", \"3913\"]",
+        "bot_message_id": "[\"3910\", \"3911\", \"3912\", \"3913\"]",
+        "crypto_address": null,
+        "is_active": true,
+        "date_added": "2022-07-27T22:30:51.222Z"
+    }
+},
+{
+    "model": "account.telegramuser",
+    "pk": 68,
+    "fields": {
+        "username": "Alexis_xanda",
+        "chat_id": "698485392",
+        "fullname": "Alex Xanda",
+        "address": null,
+        "country": null,
+        "phone": null,
+        "email": "ifexalex2@gmail.com",
+        "message_id": "[\"5141\", \"5142\", \"5143\", \"5144\", \"5145\", \"5146\", \"5147\", \"5148\", \"5149\", \"5150\", \"5151\", \"5152\", \"5153\", \"5154\", \"5155\", \"5156\", \"5157\", \"5158\", \"5159\", \"5160\", \"5161\", \"5161\", \"5162\", \"5163\", \"5164\", \"5165\", \"5165\", \"5166\", \"5167\", \"5167\", \"5168\", \"5169\", \"5170\", \"5171\", \"5172\", \"5173\", \"5174\", \"5175\", \"5176\", \"5177\", \"5178\", \"5179\", \"5180\", \"5181\", \"5182\", \"5182\", \"5183\", \"5184\", \"5185\", \"5186\", \"5186\", \"5187\", \"5188\", \"5189\", \"5190\", \"5191\", \"5193\", \"5194\", \"5195\", \"5196\", \"5197\", \"5198\", \"5199\", \"5200\", \"5201\", \"5202\", \"5203\", \"5204\", \"5205\", \"5206\", \"5207\", \"5207\", \"5208\", \"5209\", \"5210\", \"5211\", \"5211\", \"5212\", \"5213\", \"5213\", \"5214\", \"5215\", \"5215\", \"5216\"]",
+        "bot_message_id": "[\"5142\", \"5143\", \"5144\", \"5145\", \"5146\", \"5147\", \"5148\", \"5149\", \"5150\", \"5151\", \"5152\", \"5153\", \"5154\", \"5155\", \"5156\", \"5157\", \"5158\", \"5159\", \"5160\", \"5161\", \"5161\", \"5162\", \"5163\", \"5164\", \"5165\", \"5165\", \"5166\", \"5167\", \"5167\", \"5168\", \"5169\", \"5170\", \"5171\", \"5172\", \"5173\", \"5174\", \"5175\", \"5176\", \"5177\", \"5178\", \"5179\", \"5180\", \"5181\", \"5182\", \"5182\", \"5183\", \"5184\", \"5185\", \"5186\", \"5186\", \"5187\", \"5188\", \"5189\", \"5190\", \"5191\", \"5193\", \"5194\", \"5195\", \"5196\", \"5197\", \"5198\", \"5199\", \"5200\", \"5201\", \"5202\", \"5203\", \"5204\", \"5205\", \"5206\", \"5207\", \"5207\", \"5208\", \"5209\", \"5210\", \"5211\", \"5211\", \"5212\", \"5213\", \"5213\", \"5214\", \"5215\", \"5215\", \"5216\"]",
+        "crypto_address": null,
+        "is_active": true,
+        "date_added": "2022-07-28T12:26:18.285Z"
+    }
+}
+]

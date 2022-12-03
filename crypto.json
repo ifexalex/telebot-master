@@ -1,0 +1,75 @@
+[
+{
+    "model": "crypto.cryptonetwork",
+    "pk": 1,
+    "fields": {
+        "name": "BNB Smart Chain (BEP20)"
+    }
+},
+{
+    "model": "crypto.cryptonetwork",
+    "pk": 2,
+    "fields": {
+        "name": "Ethereum (ERC20)"
+    }
+},
+{
+    "model": "crypto.cryptonetwork",
+    "pk": 3,
+    "fields": {
+        "name": "Tron(TRC20)"
+    }
+},
+{
+    "model": "crypto.cryptocurrency",
+    "pk": 1,
+    "fields": {
+        "name": "Bitcoin",
+        "symbol": "BTC"
+    }
+},
+{
+    "model": "crypto.cryptocurrency",
+    "pk": 2,
+    "fields": {
+        "name": "Binance Coin",
+        "symbol": "BNB"
+    }
+},
+{
+    "model": "crypto.cryptocurrency",
+    "pk": 3,
+    "fields": {
+        "name": "Ethereum",
+        "symbol": "ETH"
+    }
+},
+{
+    "model": "crypto.cryptocurrency",
+    "pk": 4,
+    "fields": {
+        "name": "Tether",
+        "symbol": "USDT"
+    }
+},
+{
+    "model": "crypto.wallets",
+    "pk": 1,
+    "fields": {
+        "name": "USDT",
+        "address": "THG33G6ysUHErXpFCY5WFRdXCqXKkD4gz6",
+        "cryptocurrency": 4,
+        "network": 3
+    }
+},
+{
+    "model": "crypto.wallets",
+    "pk": 2,
+    "fields": {
+        "name": "BNB",
+        "address": "0x13fa85b7dd801bd863534c7df0337114c569587a",
+        "cryptocurrency": 2,
+        "network": 1
+    }
+}
+]
