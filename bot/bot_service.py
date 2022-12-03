@@ -202,7 +202,6 @@ reg_handler = ConversationHandler(
     entry_points=[CommandHandler("register", register)],
     states={
         EMAIL: [MessageHandler(Filters.text & ~Filters.command, email)],
-        PHONE: [MessageHandler(Filters.text, phone)],
         ADDRESS: [
             MessageHandler(Filters.text, address),
             CommandHandler("skip", skip_address),

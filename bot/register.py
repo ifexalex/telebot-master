@@ -10,7 +10,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-ADDRESS, EMAIL, PHONE, COUNTRY = range(4)
+ADDRESS, EMAIL, COUNTRY = range(3)
 
 
 # check if email is valid or not: returns true if valid, false if not
@@ -64,32 +64,32 @@ def email(update, context):
             reply_markup=ReplyKeyboardRemove(),
         )
         TelegramUser.append_message_id(update.message.chat_id, _message_id.message_id)
-        return PHONE
-
-
-def phone(update, context):
-    """Stores the phone number of the user."""
-    text = update.message.text
-    TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
-
-    if not is_valid_phone_number(text):
-        TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
-        _message_id_1 = update.message.reply_text(
-            f"""
-            *Phone number is invalid: Please enter a valid phone number* \n
-            """,
-            parse_mode= ParseMode.MARKDOWN,
-        )
-        TelegramUser.append_message_id(update.message.chat_id, _message_id_1.message_id)
-        return PHONE
-    else:
-        _message_id = update.message.reply_text(
-            "You are almost there! Enter your residence Address, "
-            "or send /skip to skip this step.",
-            reply_markup=ReplyKeyboardRemove(),
-        )
-        TelegramUser.append_message_id(update.message.chat_id, _message_id.message_id)
         return ADDRESS
+
+
+# def phone(update, context):
+#     """Stores the phone number of the user."""
+#     text = update.message.text
+#     TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
+
+#     if not is_valid_phone_number(text):
+#         TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
+#         _message_id_1 = update.message.reply_text(
+#             f"""
+#             *Phone number is invalid: Please enter a valid phone number* \n
+#             """,
+#             parse_mode= ParseMode.MARKDOWN,
+#         )
+#         TelegramUser.append_message_id(update.message.chat_id, _message_id_1.message_id)
+#         return PHONE
+#     else:
+#         _message_id = update.message.reply_text(
+#             "You are almost there! Enter your residence Address, "
+#             "or send /skip to skip this step.",
+#             reply_markup=ReplyKeyboardRemove(),
+#         )
+#         TelegramUser.append_message_id(update.message.chat_id, _message_id.message_id)
+#         return ADDRESS
 
 
 
