@@ -16,7 +16,7 @@ from asgiref.sync import sync_to_async, async_to_sync
 
 api_id= config("API_ID", cast = int) # You can get api_hash and api_id by creating an app on
 api_hash = config("API_HASH") # my.telegram.org/apps (needed if you use MTProto instead of BotAPI)
-BOT_TOKEN = config("BOT_TOKEN")
+BOT_TOKEN = config("BOT_TOKEN") #bot token
 
 
 # async def start():
