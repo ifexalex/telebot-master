@@ -57,10 +57,8 @@ def email(update, context):
     else:
         TelegramUser.objects.filter(chat_id=update.message.chat_id).update(email=text)
         _message_id = update.message.reply_text(
-            "Great! Please provide your phone number, "
-            "So we could contact you with time.\n"
-            "*Note: You are required to include your country code. e.g. +9199.......*",
-            parse_mode= ParseMode.MARKDOWN,
+            "You are almost there! Enter your residence Address, "
+            "or send /skip to skip this step.",
             reply_markup=ReplyKeyboardRemove(),
         )
         TelegramUser.append_message_id(update.message.chat_id, _message_id.message_id)
