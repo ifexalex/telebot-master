@@ -61,12 +61,17 @@ async def handler(event):
 @client_1.on(events.NewMessage(pattern=r"/start"))
 async def start(event):
     buttons = [
+        [Button.inline("Restart bot", data="start")],
         [Button.inline("Send message", data="message")],
         [Button.inline("Settings", data="settings")],
         [Button.inline("save auto text", data="auto_send")],
         [Button.inline("Setup payment message", data="payment")],
     ]
     await event.respond("Choose an option: ", buttons=buttons)
+
+@client_1.on(events.CallbackQuery(data="start"))
+async def start_bot(event):
+    await start(event)
 
 @client_1.on(events.CallbackQuery(data="message"))
 async def message(event):
