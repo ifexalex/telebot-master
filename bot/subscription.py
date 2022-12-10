@@ -342,7 +342,7 @@ def submit_transaction_hash(update, context):
     TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
     bot_message = update.message.reply_text(
         f"""
-        *Enter the transaction Hash:* \n
+        *Enter the Txid/transaction Hash:* \n
         """,
         parse_mode= ParseMode.MARKDOWN,
     )
