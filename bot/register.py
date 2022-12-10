@@ -10,7 +10,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-ADDRESS, EMAIL, COUNTRY = range(3)
+EMAIL = range(1)
 
 
 # check if email is valid or not: returns true if valid, false if not
@@ -55,14 +55,14 @@ def email(update, context):
         TelegramUser.append_message_id(update.message.chat_id, _message_id_1.message_id)
         return EMAIL
     else:
-        TelegramUser.objects.filter(chat_id=update.message.chat_id).update(email=text)
-        _message_id = update.message.reply_text(
-            "You are almost there! Enter your residence Address, "
-            "or send /skip to skip this step.",
-            reply_markup=ReplyKeyboardRemove(),
-        )
-        TelegramUser.append_message_id(update.message.chat_id, _message_id.message_id)
-        return ADDRESS
+        # TelegramUser.objects.filter(chat_id=update.message.chat_id).update(email=text)
+        # _message_id = update.message.reply_text(
+        #     "You are almost there! Enter your residence Address, "
+        #     "or send /skip to skip this step.",
+        #     reply_markup=ReplyKeyboardRemove(),
+        # )
+        # TelegramUser.append_message_id(update.message.chat_id, _message_id.message_id)
+        return skip_address(update,context)
 
 
 # def phone(update, context):
@@ -94,40 +94,12 @@ def email(update, context):
 def address(update, context):
     """Stores the selected address and asks for country."""
     TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
-
-    _message_id = update.message.reply_text(
-        "Nice! Enter your country of origin, "
-        "so I know how to contact you.",
-        
-        reply_markup=ReplyKeyboardRemove(),
-    )
-    TelegramUser.append_message_id(update.message.chat_id, _message_id.message_id)
-    return COUNTRY
-
-def skip_address(update, context):
-    """
-    Skips the address step.
-    If the user skips the address step,
-    then the user is asked to send the country.
-    """
-    TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
-    _message_id = update.message.reply_text(
-        "Enter your country of origin, "
-        "so I know how to contact you.",
-        reply_markup=ReplyKeyboardRemove(),
-    )
-    TelegramUser.append_message_id(update.message.chat_id, _message_id.message_id)
-    return COUNTRY
-
-def country(update, context):
-    """Stores the country of the user."""
-    TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
     reply_keyboard = [["/subscribe"],["/updateInformation"],["Signal Report 📈", "/help"]]
 
     _message_id = update.message.reply_text(
         f"Thank you {update.message.from_user.first_name}! Your details has been saved.\n"
         "You can now proceed with subscription.",
-
+        
         reply_markup=ReplyKeyboardMarkup(
             reply_keyboard,
             one_time_keyboard=True,
@@ -137,6 +109,41 @@ def country(update, context):
     )
     TelegramUser.append_message_id(update.message.chat_id, _message_id.message_id)
     return ConversationHandler.END
+
+def skip_address(update, context):
+    """
+    Skips the address step.
+    If the user skips the address step,
+    then the user is asked to send the country.
+    """
+    TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
+    reply_keyboard = [["/subscribe"],["/updateInformation"],["Signal Report 📈", "/help"]]
+    _message_id = update.message.reply_text(
+        f"Thank you {update.message.from_user.first_name}! Your details has been saved.\n"
+        "You can now proceed with subscription.",
+        reply_markup=ReplyKeyboardMarkup(
+            reply_keyboard,
+            one_time_keyboard=True,
+            input_field_placeholder="Select an option",
+            resize_keyboard=True,
+        ),
+    )
+    TelegramUser.append_message_id(update.message.chat_id, _message_id.message_id)
+    return ConversationHandler.END
+
+# def country(update, context):
+#     """Stores the country of the user."""
+#     TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
+#     reply_keyboard = [["/subscribe"],["/updateInformation"],["Signal Report 📈", "/help"]]
+
+#     _message_id = update.message.reply_text(
+#         f"Thank you {update.message.from_user.first_name}! Your details has been saved.\n"
+#         "You can now proceed with subscription.",
+
+#         reply_markup= reply_keyboard = [["/subscribe"],["/updateInformation"],["Signal Report 📈", "/help"]]
+#     )
+#     TelegramUser.append_message_id(update.message.chat_id, _message_id.message_id)
+#     return ConversationHandler.END
     
 
 def cancel_reg(update, context):

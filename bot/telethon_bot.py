@@ -54,13 +54,15 @@ async def handler(event):
     
     :param event: The event object that was just received
     """
-    if (event.chat.title == "Test Channel" and auto_send.auto_send):
+    if (event.chat.title == "Test Channel" and auto_send.auto_send and "#BULLISHHH" in event.raw_text):
         text = auto_send.auto_send_text
-        await client_1.send_message("https://t.me/testgroupchanneltrial", f"{text}\n Link: https://t.me/cornix_premuim_Bot")
+        await client_1.send_message("https://t.me/testgroupchanneltrial", f"{text}", buttons=[[Button.url("Cornix Premium Bot", "https://t.me/cornix_premuim_Bot")]])
 
+        
 @client_1.on(events.NewMessage(pattern=r"/start"))
 async def start(event):
     buttons = [
+        [Button.inline("Restart bot", data="start")],
         [Button.inline("Send message", data="message")],
         [Button.inline("Settings", data="settings")],
         [Button.inline("save auto text", data="auto_send")],
@@ -68,12 +70,17 @@ async def start(event):
     ]
     await event.respond("Choose an option: ", buttons=buttons)
 
+@client_1.on(events.CallbackQuery(data="start"))
+async def start_bot(event):
+    await start(event)
+
 @client_1.on(events.CallbackQuery(data="message"))
 async def message(event):
     async with client_1.conversation(event.chat_id) as conv:
         await conv.send_message("Please Type the message you want to send")
         response = await conv.get_response()
-        await client_1.send_message("https://t.me/testgroupchanneltrial", f"{response.text}\n Link: https://t.me/cornix_premuim_Bot")
+        await client_1.send_message("https://t.me/testgroupchanneltrial", f"{response.text}", buttons=[[Button.url("Cornix Premium Bot", "https://t.me/cornix_premuim_Bot")]])
+        # await client_1.send_file("https://t.me/testgroupchanneltrial", file = response.media, caption=f"{response.text}", buttons=[[Button.url("Cornix Premium Bot", "https://t.me/cornix_premuim_Bot")]])
         await conv.send_message("Message sent successfully")
         await start(event)
 

@@ -16,7 +16,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-START, WITHDRAWAL_NETWORK, ECHO_UPLOAD, UPLOAD_QRCODE,CONFIRM_PLAN,SELECT_PAYOUT_WALLET,CONFIRM_PAYOUT_WALLET,SELECT_WALLET,SELECT_PAYOUT_WALLET, SELECT_ADDRESS,TXN_HASH,FINISHED, ECHO, CHAT, MENU= range(15)
+START, WITHDRAWAL_NETWORK, ECHO_UPLOAD, UPLOAD_QRCODE,CONFIRM_PLAN,SELECT_PAYOUT_WALLET,CONFIRM_PAYOUT_WALLET,TXN_HASH,FINISHED, ECHO, CHAT, MENU= range(12)
 
 def subscribe(update, context):
     text = str(update.message.text)
@@ -48,9 +48,8 @@ def select_withdrawal_coin(update, context):
     if text == "No 🔕":
         TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
         return cancel_subscription(update, context)
-    coins = CryptoCurrency.objects.all()[:3]
-    coins_1 = CryptoCurrency.objects.all()[3:]
-    reply_keyboard = [[coin.symbol for coin in coins], [coin.symbol for coin in coins_1],["Back 🔙"]]
+    coins = CryptoCurrency.objects.all()
+    reply_keyboard = [[coin.symbol for coin in coins],["Back 🔙"]]
     bot_message =update.message.reply_text(
         f"""
         *Select your preferred withdrawal coin:* \n
@@ -77,24 +76,24 @@ def select_withdrawal_network(update, context):
     if text == "Back 🔙":
         TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
         return select_withdrawal_coin(update, context)
-    elif text in {"BNB", "BUSD"}:
-        networks = CryptoNetwork.objects.filter(name__in=["Beacon Chain (BEP2)","BNB Chain (BEP20)","Ethereum (ERC20)"])
-        reply_keyboard = [[network.name for network in networks], ["Back 🔙"]]
+    # elif text in {"BNB", "BUSD"}:
+    #     networks = CryptoNetwork.objects.filter(name__in=["Beacon Chain (BEP2)","BNB Chain (BEP20)","Ethereum (ERC20)"])
+    #     reply_keyboard = [[network.name for network in networks], ["Back 🔙"]]
 
-        bot_message = update.message.reply_text(
-        f"""
-        *Select your preferred network for withdrawal* \n
-        """,
-        parse_mode= ParseMode.MARKDOWN,
-        reply_markup=ReplyKeyboardMarkup(
-            reply_keyboard,
-            one_time_keyboard=True,
-            input_field_placeholder="Select Network",
-            resize_keyboard=True,
-        )
-        )
-        TelegramUser.append_message_id(update.message.chat_id, bot_message.message_id)
-        return ECHO_UPLOAD
+    #     bot_message = update.message.reply_text(
+    #     f"""
+    #     *Select your preferred network for withdrawal* \n
+    #     """,
+    #     parse_mode= ParseMode.MARKDOWN,
+    #     reply_markup=ReplyKeyboardMarkup(
+    #         reply_keyboard,
+    #         one_time_keyboard=True,
+    #         input_field_placeholder="Select Network",
+    #         resize_keyboard=True,
+    #     )
+    #     )
+    #     TelegramUser.append_message_id(update.message.chat_id, bot_message.message_id)
+    #     return ECHO_UPLOAD
 
 
     elif text == "USDT":
@@ -126,6 +125,8 @@ def echo_upload(update, context):
         TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
         return select_withdrawal_network(update, context)
 
+    reply_keyboard = [["/skip"]]
+
     bot_message = update.message.reply_text(
         f"""
         *Upload an image of your wallet QRcode* \n
@@ -134,7 +135,12 @@ if you don't have the QRcode image, you can click /skip to skip this step
 Note: *You can paste the address manually if you don't have the QRcode image in the next step.*\n
 """,
         parse_mode= ParseMode.MARKDOWN,
-        reply_markup=ReplyKeyboardRemove(),
+        reply_markup=ReplyKeyboardMarkup(
+            reply_keyboard,
+            one_time_keyboard=True,
+            resize_keyboard=True,
+            input_field_placeholder="Click to skip to the next step",
+        )
     )
     TelegramUser.append_message_id(update.message.chat_id, bot_message.message_id)
     return UPLOAD_QRCODE
@@ -274,10 +280,21 @@ def confirm_paying_wallet(update, context):
     #     """,
     #     parse_mode= ParseMode.MARKDOWN,
     # )
+    img_url = "path"
 
-    bot_message_1 = context.bot.send_message(
+    if 'ETH' in text:
+        img_url = "static/images/eth_qrcode.jpg"
+    elif "Bitcoin" in text:
+        img_url = "static/images/btc_qrcode.jpg"
+    elif "USDT" in text:
+        img_url = "static/images/usdt_qrcode.jpg"
+
+
+
+    bot_message_1 = context.bot.send_photo(
         chat_id=update.message.chat_id,
-        text= f"""\n
+        photo= open(img_url, "rb"),
+        caption= f"""\n
 *Please send the amount you want to pay to the above address* \n
 *Below is the wallet full details: * \n
 *Coin:* _{selected_wallet.cryptocurrency.symbol}_
@@ -287,9 +304,25 @@ _Note: Payment is expected to be received within 12hours_\n
 _After payment, you are required to copy the transaction hash as you
 will be submitting it for confirmation in the next step._\n
 """,
+        parse_mode= ParseMode.MARKDOWN,
         reply_markup=InlineKeyboardMarkup(button),
-        parse_mode= ParseMode.MARKDOWN,   
     )
+
+#     bot_message_1 = context.bot.send_message(
+#         chat_id=update.message.chat_id,
+#         text= f"""\n
+# *Please send the amount you want to pay to the above address* \n
+# *Below is the wallet full details: * \n
+# *Coin:* _{selected_wallet.cryptocurrency.symbol}_
+# *address:* _{selected_wallet.address}_
+# *Network:* _{selected_wallet.network}_\n
+# _Note: Payment is expected to be received within 12hours_\n
+# _After payment, you are required to copy the transaction hash as you
+# will be submitting it for confirmation in the next step._\n
+# """,
+#         reply_markup=InlineKeyboardMarkup(button),
+#         parse_mode= ParseMode.MARKDOWN,   
+#     )
     TelegramUser.append_message_id(update.message.chat_id, bot_message_1.message_id)
     user = TelegramUser.objects.get(chat_id=update.message.chat_id)
     send_mail(
@@ -302,13 +335,14 @@ will be submitting it for confirmation in the next step._\n
 
                 }
             )
+    return TXN_HASH
 
 def submit_transaction_hash(update, context):
     text = str(update.message.text)
     TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
     bot_message = update.message.reply_text(
         f"""
-        *Enter the transaction Hash:* \n
+        *Enter the Txid/transaction Hash:* \n
         """,
         parse_mode= ParseMode.MARKDOWN,
     )
