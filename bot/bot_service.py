@@ -68,12 +68,14 @@ def start(update, context):
 
     # print(username, chat_id, fullname, message_id)
     _message_id_1 = update.message.reply_text(
-        f"""Hello *{firstname}*! \n
-Welcome to the Cornix Premium Bullish Bot! \n
-Using our system, you'll be able to automate your crypto trading with advanced trading features, designed to minimize/terminate risks and maximize profits. \n
+        f"""Hello Premium Payment confirmation desk! 
 
-Whether you're trading with a signal provider, on your own, or using TradingView alerts, our bot will do the heavy lifting for you. \n
-        """,
+Welcome to the Cornix Premium Bullish Bot! 
+
+Using our premium system, we'll automate your crypto trading with advanced trading features, designed to minimize/terminate risks and maximize profits. 
+
+
+Whether you're trading with a signal provider, on your own, or using TradingView alerts, our bot will do the heavy lifting for you.""",
         parse_mode=ParseMode.MARKDOWN,
     )
 
@@ -107,7 +109,7 @@ def trade_signal(update, context):
     firstname = update.message.from_user.first_name
     reply_keyboard = [["cancel 🚫"]]
     button = [
-        [InlineKeyboardButton("proceed ✅", url="https://t.me/premiumsignalsreport")]
+        [InlineKeyboardButton("proceed ✅", url="https://t.me/premiumsignals_report")]
     ]
     _message_id = context.bot.send_message(
         chat_id=update.message.chat_id,
@@ -202,11 +204,10 @@ reg_handler = ConversationHandler(
     entry_points=[CommandHandler("register", register)],
     states={
         EMAIL: [MessageHandler(Filters.text & ~Filters.command, email)],
-        ADDRESS: [
-            MessageHandler(Filters.text, address),
-            CommandHandler("skip", skip_address),
-        ],
-        COUNTRY: [MessageHandler(Filters.text, country)],
+        # ADDRESS: [
+        #     MessageHandler(Filters.text, address),
+        #     CommandHandler("skip", skip_address),
+        # ],
     },
     fallbacks=[CommandHandler("cancel", cancel_reg)],
     allow_reentry=True,
