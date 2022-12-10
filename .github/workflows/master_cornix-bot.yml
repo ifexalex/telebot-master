@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'cornix-bot'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D925F1CA9A8640DAB968B4A44F64C7F5 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_89869DE302D94B1FA052D603344BE150 }}
