@@ -26,8 +26,8 @@ BOT_TOKEN = config("BOT_TOKEN") #bot token
 #     await client.delete_messages(int(user_chat_id),user_message_id,revoke=True)
 
 
-client = TelegramClient("session/sesssion-master-user", api_id, api_hash)
-client_1 = TelegramClient("session/sesssion-bot", api_id, api_hash).start(bot_token=BOT_TOKEN)
+client = TelegramClient("session/admin-test1-session", api_id, api_hash)
+client_1 = TelegramClient("session/admin-test1-session", api_id, api_hash).start(bot_token=BOT_TOKEN)
 
 
 
