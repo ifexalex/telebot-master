@@ -82,17 +82,30 @@ WSGI_APPLICATION = "telebot.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "d3ahtj9au9mmrs",
-        "USER": "kdisvbalnwezfp",
-        "PASSWORD": "dc40f686559a6f4c631989c257c309b610caadada732177a425aa920ecc2f41c",
-        "HOST": "ec2-44-195-162-77.compute-1.amazonaws.com",
-        "PORT": "5432",
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "d3ahtj9au9mmrs",
+#         "USER": "kdisvbalnwezfp",
+#         "PASSWORD": "dc40f686559a6f4c631989c257c309b610caadada732177a425aa920ecc2f41c",
+#         "HOST": "ec2-44-195-162-77.compute-1.amazonaws.com",
+#         "PORT": "5432",
 
-    }
+#     }
+# }
+
+DATABASES = {
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'cornix-database',
+    'USER': 'ifexalex',
+    'PASSWORD': 'fzIytNVcO0B8',
+    'HOST': 'ep-weathered-water-146115.eu-central-1.aws.neon.tech',
+    'PORT': '5432',
+  }
 }
+
+
 
 
 # Password validation

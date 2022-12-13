@@ -18,6 +18,8 @@ api_id= config("API_ID", cast = int) # You can get api_hash and api_id by creati
 api_hash = config("API_HASH") # my.telegram.org/apps (needed if you use MTProto instead of BotAPI)
 BOT_TOKEN = config("BOT_TOKEN") #bot token
 
+print(api_id,api_hash,BOT_TOKEN)
+
 
 # async def start():
 #     user_chat = await sync_to_async(TelegramSettings.objects.get, thread_sensitive=True)(chat_id="698485392")
@@ -26,8 +28,8 @@ BOT_TOKEN = config("BOT_TOKEN") #bot token
 #     await client.delete_messages(int(user_chat_id),user_message_id,revoke=True)
 
 
-client = TelegramClient("session/admin-test1-session", api_id, api_hash)
-client_1 = TelegramClient("session/admin-test1-session", api_id, api_hash).start(bot_token=BOT_TOKEN)
+# client = TelegramClient("session/session-master", api_id, api_hash)
+client_1 = TelegramClient("session/session-master", api_id, api_hash).start(bot_token=BOT_TOKEN)
 
 
 
