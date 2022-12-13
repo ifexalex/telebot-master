@@ -98,6 +98,7 @@ Whether you're trading with a signal provider, on your own, or using TradingView
         ),
     )
     TelegramUser.append_message_id(update.message.chat_id, _message_id_2.message_id)
+    
 
 
 

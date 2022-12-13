@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-wr!w%ll@ej&q_kr09uicwwjhw-4=a$$3)t3*6958-4+)q3!_%&"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [config('WEB_HOST'), 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [config('WEB_HOST'), "cornix-bot-main.azurewebsites.net",'localhost', '127.0.0.1']
 
 
 # Application definition
