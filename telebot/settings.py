@@ -97,11 +97,11 @@ WSGI_APPLICATION = "telebot.wsgi.application"
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'cornix-database',
-    'USER': 'ifexalex',
-    'PASSWORD': 'fzIytNVcO0B8',
-    'HOST': 'ep-weathered-water-146115.eu-central-1.aws.neon.tech',
-    'PORT': '5432',
+    'NAME': config('DB_NAME'),
+    'USER': config('DB_USER'),
+    'PASSWORD': config('DB_PASSWORD'),
+    'HOST': config('DB_HOST'),
+    'PORT': config('DB_PORT'),
   }
 }
 
