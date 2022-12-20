@@ -273,7 +273,7 @@ subscribe_handler = ConversationHandler(
         ],
         ECHO_UPLOAD: [MessageHandler(Filters.text, echo_upload)],
         UPLOAD_QRCODE: [
-            MessageHandler(Filters.photo | Filters.text, upload_qrcode),
+            MessageHandler(Filters.photo | Filters.regex(r'Back'), upload_qrcode),
             CommandHandler("skip", skip_upload_qrcode),
         ],
         CONFIRM_PLAN: [

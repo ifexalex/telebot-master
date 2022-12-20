@@ -20,11 +20,11 @@ BOT_TOKEN = config("BOT_TOKEN") #bot token
 
 # from azure.common.credentials import ServicePrincipalCredentials
 # from azure.mgmt.resource import ResourceManagementClient
-# from azure.mgmt.web import WebSiteManagementClient
+# from azure.mgmt.web.v2022_03_01.operations import WebAppsOperations
 
 # subscription_id ="9a4cf7ee-66b8-4224-96c2-beed2f52435c" #you can get it from azure portal
-# client_id ="xxx"
-# secret="xxx"
+# client_id ="df173e71-2a1c-487e-895a-e846c098a8b1"
+# secret="zLK8Q~Fz1-35cx.UjLBd2MmJAxRSiWq3pSj01bsW"
 # tenant="e12f7f7b-e026-4457-ab17-34655c69a628"
 
 # credentials = ServicePrincipalCredentials(
@@ -33,7 +33,7 @@ BOT_TOKEN = config("BOT_TOKEN") #bot token
 #     tenant = tenant
 # )
 
-# #resource_client = ResourceManagementClient(credentials,subscription_id)
+# resource_client = ResourceManagementClient(credentials,subscription_id)
 # web_client = WebSiteManagementClient(credentials,subscription_id)
 
 # #restart your azure web app
