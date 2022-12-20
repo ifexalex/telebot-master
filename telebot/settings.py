@@ -94,6 +94,7 @@ WSGI_APPLICATION = "telebot.wsgi.application"
 #     }
 # }
 
+
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql',
