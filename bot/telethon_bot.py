@@ -18,26 +18,26 @@ api_id= config("API_ID", cast = int) # You can get api_hash and api_id by creati
 api_hash = config("API_HASH") # my.telegram.org/apps (needed if you use MTProto instead of BotAPI)
 BOT_TOKEN = config("BOT_TOKEN") #bot token
 
-from azure.common.credentials import ServicePrincipalCredentials
-from azure.mgmt.resource import ResourceManagementClient
-from azure.mgmt.web import WebSiteManagementClient
+# from azure.common.credentials import ServicePrincipalCredentials
+# from azure.mgmt.resource import ResourceManagementClient
+# from azure.mgmt.web import WebSiteManagementClient
 
-subscription_id ="9a4cf7ee-66b8-4224-96c2-beed2f52435c" #you can get it from azure portal
-client_id ="xxx"
-secret="xxx"
-tenant="xxx"
+# subscription_id ="9a4cf7ee-66b8-4224-96c2-beed2f52435c" #you can get it from azure portal
+# client_id ="xxx"
+# secret="xxx"
+# tenant="xxx"
 
-credentials = ServicePrincipalCredentials(
-    client_id= client_id,
-    secret=secret,
-    tenant = tenant
-)
+# credentials = ServicePrincipalCredentials(
+#     client_id= client_id,
+#     secret=secret,
+#     tenant = tenant
+# )
 
-#resource_client = ResourceManagementClient(credentials,subscription_id)
-web_client = WebSiteManagementClient(credentials,subscription_id)
+# #resource_client = ResourceManagementClient(credentials,subscription_id)
+# web_client = WebSiteManagementClient(credentials,subscription_id)
 
-#restart your azure web app
-web_client.web_apps.restart("your_resourceGroup_name","your_web_app_name")
+# #restart your azure web app
+# web_client.web_apps.restart("your_resourceGroup_name","your_web_app_name")
 
 
 
