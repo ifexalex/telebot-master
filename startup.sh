@@ -1,1 +1,1 @@
-gunicorn --bind=0.0.0.0 --timeout 600 telebot.wsgi & python manage.py telegrambot1 & python manage.py telegrambot
+gunicorn --bind=0.0.0.0 --timeout 600 --workers=4 --chdir telebot.wsgi & python3 manage.py telegrambot & python3 manage.py telegrambot1
