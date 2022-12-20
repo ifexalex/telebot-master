@@ -105,6 +105,7 @@ class TelegramUserMessage(models.Model):
 class TelegramSettings(models.Model):
     auto_send = models.BooleanField(default=False)
     auto_send_text = models.TextField(blank=True, null=True)
+    bot_status = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"Auto Send: {self.auto_send}"
+        return f"Auto Send: {self.auto_send}: bot_status: {self.bot_status}"

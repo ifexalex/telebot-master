@@ -23,7 +23,7 @@ from decouple import config
 from django.dispatch import receiver
 from telegram import *
 from telegram.ext import *
-from account.models import TelegramUser
+from account.models import TelegramUser,TelegramSettings
 from crypto.models import CryptoCurrency, CryptoNetwork, Wallets
 import coinaddrvalidator
 import re
@@ -52,7 +52,6 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-
 # Define a few command handlers. These usually take the two arguments update and
 # context. Error handlers also receive the raised TelegramError object in error.
 def start(update, context):
@@ -66,9 +65,10 @@ def start(update, context):
         update.message.message_id,
     )
 
-    # print(username, chat_id, fullname, message_id)
-    _message_id_1 = update.message.reply_text(
-        f"""Hello Premium Payment confirmation desk! 
+    if not TelegramSettings.objects.get(id=1).bot_status:
+        # print(username, chat_id, fullname, message_id)
+        _message_id_1 = update.message.reply_text(
+        """Hello Premium Payment confirmation desk! 
 
 Welcome to the Cornix Premium Bullish Bot! 
 
@@ -79,14 +79,14 @@ Whether you're trading with a signal provider, on your own, or using TradingView
         parse_mode=ParseMode.MARKDOWN,
     )
 
-    reply_keyboard = [
+        reply_keyboard = [
         [
             "/register",
         ]
     ]
-    TelegramUser.append_message_id(update.message.chat_id, _message_id_1.message_id)
+        TelegramUser.append_message_id(update.message.chat_id, _message_id_1.message_id)
 
-    _message_id_2 = update.effective_message.reply_text(
+        _message_id_2 = update.effective_message.reply_text(
         f"""
         *Are you ready to connect with Cornix Premium? 😎* \n
         """,
@@ -97,11 +97,10 @@ Whether you're trading with a signal provider, on your own, or using TradingView
             resize_keyboard=True,
         ),
     )
-    TelegramUser.append_message_id(update.message.chat_id, _message_id_2.message_id)
+        TelegramUser.append_message_id(update.message.chat_id, _message_id_2.message_id)
+    else:
+        off_notice(update, context)
     
-
-
-
 
 
 def trade_signal(update, context):
@@ -109,6 +108,7 @@ def trade_signal(update, context):
     TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
     firstname = update.message.from_user.first_name
     reply_keyboard = [["cancel 🚫"]]
+    
     button = [
         [InlineKeyboardButton("proceed ✅", url="https://t.me/premiumsignals_report")]
     ]
@@ -147,6 +147,22 @@ __we would cease to exist. It will always be a pleasure to serve you.__
     )
     TelegramUser.append_message_id(update.message.chat_id, message_.message_id)
 
+def off_notice(update, context):
+    message_ = update.message.reply_text(
+            f"""
+            🚫 *Subscription  Paused* 🚫 \n
+subscription has been paused for now due to the number of required users has been reached \n
+/start 
+/help 
+
+__Stay tuned for next week as another subscription window will be opened, 
+__It will always be a pleasure to serve you.__ 
+
+*Thank you for choosing Cornix Premium!😊*.
+    """,
+            parse_mode=ParseMode.MARKDOWN,
+    )
+
 
 def echo(update, context):
     """Echo the user message."""
@@ -163,6 +179,8 @@ def echo(update, context):
         subscribe(update, context)
     elif text == "Signal Report 📈":
         trade_signal(update, context)
+    elif not TelegramSettings.objects.get(id=1).bot_status:
+        off_notice(update, context)
     else:
         invalid(update, context)
         
@@ -287,6 +305,7 @@ subscribe_handler = ConversationHandler(
 start_handler = CommandHandler("start", start)
 
 
+
 def main():
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
@@ -304,21 +323,31 @@ def main():
             start,
         )
     )
-
-    dp.add_handler(reg_handler)
-    dp.add_handler(update_succesful_handler)
-    dp.add_handler(subscribe_handler)
     # dp.add_handler(chat_handler)
-    
+    if TelegramSettings.objects.get(id=1).bot_status:
+        print("Bot status is off")
+        dp.add_handler(
+            MessageHandler(
+                Filters.text | ~Filters.command | Filters.regex('^(Back 🔙|Change wallet 🔙)'),
 
-    # on noncommand i.e message - echo the message on Telegram
-    dp.add_handler(
-        MessageHandler(
-            Filters.text & ~Filters.command | Filters.regex('^(Back 🔙|Change wallet 🔙)'),
+                off_notice,
 
-            echo,
+            )
         )
-    )
+    else:
+        print("Bot status is on")
+        dp.add_handler(reg_handler)
+        dp.add_handler(update_succesful_handler)
+        dp.add_handler(subscribe_handler)
+
+        # on noncommand i.e message - echo the message on Telegram
+        dp.add_handler(
+            MessageHandler(
+                Filters.text & Filters.command | Filters.regex('^(Back 🔙|Change wallet 🔙)'),
+
+                echo,
+            )
+        )
 
     # log all errors
     dp.add_error_handler(error)
@@ -333,4 +362,5 @@ def main():
 
 
 if __name__ == "__main__":
+    
     main()

@@ -18,6 +18,27 @@ api_id= config("API_ID", cast = int) # You can get api_hash and api_id by creati
 api_hash = config("API_HASH") # my.telegram.org/apps (needed if you use MTProto instead of BotAPI)
 BOT_TOKEN = config("BOT_TOKEN") #bot token
 
+from azure.common.credentials import ServicePrincipalCredentials
+from azure.mgmt.resource import ResourceManagementClient
+from azure.mgmt.web import WebSiteManagementClient
+
+subscription_id ="9a4cf7ee-66b8-4224-96c2-beed2f52435c" #you can get it from azure portal
+client_id ="xxx"
+secret="xxx"
+tenant="xxx"
+
+credentials = ServicePrincipalCredentials(
+    client_id= client_id,
+    secret=secret,
+    tenant = tenant
+)
+
+#resource_client = ResourceManagementClient(credentials,subscription_id)
+web_client = WebSiteManagementClient(credentials,subscription_id)
+
+#restart your azure web app
+web_client.web_apps.restart("your_resourceGroup_name","your_web_app_name")
+
 
 
 # async def start():
@@ -68,6 +89,7 @@ async def start(event):
         [Button.inline("Settings", data="settings")],
         [Button.inline("save auto text", data="auto_send")],
         [Button.inline("Setup payment message", data="payment")],
+        [Button.inline("Pause Bot", data="pause")],
     ]
     await event.respond("Choose an option: ", buttons=buttons)
 
@@ -108,6 +130,30 @@ async def settings(event):
         await conv.send_message("Turn on or Turn off the auto message sending settings", buttons=buttons)
 
 
+@client_1.on(events.CallbackQuery(data="pause"))
+async def pause(event):
+    status = await sync_to_async(TelegramSettings.objects.get, thread_sensitive=True)(id=1)
+    async with client_1.conversation(event.chat_id) as conv:
+        buttons = [[Button.inline("Resume", data="resume_bot")] if status.bot_status else [Button.inline("Pause", data="pause_bot")]]
+        await conv.send_message("Pause or Resume the Premium Bot", buttons=buttons)
+
+
+@client_1.on(events.CallbackQuery(data="resume_bot"))
+async def resume_bot(event):
+    status = await sync_to_async(TelegramSettings.objects.get, thread_sensitive=True)(id=1)
+    await event.respond("Premium Bot is now resumed")
+    status.bot_status = False
+    await sync_to_async(status.save, thread_sensitive=True)()
+    await start(event)
+
+
+@client_1.on(events.CallbackQuery(data="pause_bot"))
+async def pause_bot(event):
+    status = await sync_to_async(TelegramSettings.objects.get, thread_sensitive=True)(id=1)
+    await event.respond("Premium Bot is now paused")
+    status.bot_status = True
+    await sync_to_async(status.save, thread_sensitive=True)()
+    await start(event)
 
         
 @client_1.on(events.CallbackQuery(data="off_auto_send"))
