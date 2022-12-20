@@ -25,7 +25,7 @@ BOT_TOKEN = config("BOT_TOKEN") #bot token
 # subscription_id ="9a4cf7ee-66b8-4224-96c2-beed2f52435c" #you can get it from azure portal
 # client_id ="xxx"
 # secret="xxx"
-# tenant="xxx"
+# tenant="e12f7f7b-e026-4457-ab17-34655c69a628"
 
 # credentials = ServicePrincipalCredentials(
 #     client_id= client_id,

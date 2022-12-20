@@ -125,7 +125,7 @@ def echo_upload(update, context):
         TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
         return select_withdrawal_network(update, context)
 
-    reply_keyboard = [["/skip"]]
+    reply_keyboard = [["/skip"], ["Back 🔙"]]
 
     bot_message = update.message.reply_text(
         f"""
@@ -149,6 +149,9 @@ Note: *You can paste the address manually if you don't have the QRcode image in 
 
 def upload_qrcode(update, context):
     text = str(update.message.text)
+    if text == "Back 🔙":
+        TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
+        return select_withdrawal_network(update, context)
     TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
     photo_file = update.message.photo[-1].get_file()
     photo_file.download("user_photo.jpg")

@@ -179,9 +179,9 @@ def echo(update, context):
         subscribe(update, context)
     elif text == "Signal Report 📈":
         trade_signal(update, context)
-    elif not TelegramSettings.objects.get(id=1).bot_status:
+    elif not TelegramSettings.objects.get(id=1).bot_status and text not in ["Back 🔙","Change wallet 🔙"]:
         off_notice(update, context)
-    else:
+    elif text not in ["Back 🔙","Change wallet 🔙"]:
         invalid(update, context)
         
 
@@ -259,7 +259,6 @@ network_list = [chain.name for chain in CryptoNetwork.objects.all()] + ["Back �
 plan_list = [plan.name for plan in InvestmentPlan.objects.all()] + [" Back🔙"]
 wallet_list = [wallet.name for wallet in Wallets.objects.all()] + [" Back🔙"]
 
-
 subscribe_handler = ConversationHandler(
     entry_points=[CommandHandler("subscribe", subscribe)],
     states={
@@ -274,7 +273,7 @@ subscribe_handler = ConversationHandler(
         ],
         ECHO_UPLOAD: [MessageHandler(Filters.text, echo_upload)],
         UPLOAD_QRCODE: [
-            MessageHandler(Filters.photo, upload_qrcode),
+            MessageHandler(Filters.photo | Filters.text, upload_qrcode),
             CommandHandler("skip", skip_upload_qrcode),
         ],
         CONFIRM_PLAN: [
