@@ -179,9 +179,9 @@ def echo(update, context):
         subscribe(update, context)
     elif text == "Signal Report 📈":
         trade_signal(update, context)
-    elif not TelegramSettings.objects.get(id=1).bot_status and text not in ["Back 🔙","Change wallet 🔙"]:
-        off_notice(update, context)
-    elif text not in ["Back 🔙","Change wallet 🔙"]:
+    # elif not TelegramSettings.objects.get(id=1).bot_status and text not in ["Back 🔙","Change wallet 🔙"]:
+    #     off_notice(update, context)
+    else:
         invalid(update, context)
         
 
@@ -324,7 +324,6 @@ def main():
     )
     # dp.add_handler(chat_handler)
     if TelegramSettings.objects.get(id=1).bot_status:
-        print("Bot status is off")
         dp.add_handler(
             MessageHandler(
                 Filters.text | ~Filters.command | Filters.regex('^(Back 🔙|Change wallet 🔙)'),
@@ -334,7 +333,6 @@ def main():
             )
         )
     else:
-        print("Bot status is on")
         dp.add_handler(reg_handler)
         dp.add_handler(update_succesful_handler)
         dp.add_handler(subscribe_handler)
@@ -342,7 +340,7 @@ def main():
         # on noncommand i.e message - echo the message on Telegram
         dp.add_handler(
             MessageHandler(
-                Filters.text & Filters.command | Filters.regex('^(Back 🔙|Change wallet 🔙)'),
+                Filters.text | Filters.command | Filters.regex('^(Back 🔙|Change wallet 🔙)'),
 
                 echo,
             )

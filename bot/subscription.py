@@ -412,12 +412,19 @@ def start_chat(update, context):
 def cancel_subscription(update, context):
     text = str(update.message.text)
     TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
+    reply_keyboard = [["/subscribe"],["/updateInformation"],["Signal Report 📈", "/help"]]
     bot_message = update.message.reply_text(
         f"""
         *You have cancelled the subscription process.* \n
 *Please try again later.* \n
         """,
         parse_mode= ParseMode.MARKDOWN,
+        reply_markup=ReplyKeyboardMarkup(
+            reply_keyboard,
+            one_time_keyboard=True,
+            input_field_placeholder="Select an option",
+            resize_keyboard=True,
+        ),
     )
     TelegramUser.append_message_id(update.message.chat_id, bot_message.message_id)
     return ConversationHandler.END
