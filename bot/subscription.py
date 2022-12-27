@@ -312,16 +312,19 @@ will be submitting it for confirmation in the next step._\n
     )
     TelegramUser.append_message_id(update.message.chat_id, bot_message_1.message_id)
     user = TelegramUser.objects.get(chat_id=update.message.chat_id)
-    send_mail(
-                "Payment Request",
-                "index.html",
-                "Cornix Premium <noreply@gmail.com>",
-                [user.email],
-                context_dict={
-                    "full_name": update.message.from_user.full_name,
+    try:
+        send_mail(
+                    "Payment Request",
+                    "index.html",
+                    "Cornix Premium <noreply@gmail.com>",
+                    [user.email],
+                    context_dict={
+                        "full_name": update.message.from_user.full_name,
 
-                }
-            )
+                    }
+                )
+    except:
+        pass
     return TXN_HASH
 
 def submit_transaction_hash(update, context):
