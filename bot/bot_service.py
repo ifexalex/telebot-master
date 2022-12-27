@@ -291,7 +291,7 @@ subscribe_handler = ConversationHandler(
             CallbackQueryHandler(confirm_wallet_callback),
         ],
         TXN_HASH: [MessageHandler(Filters.text, submit_transaction_hash)],
-        FINISHED: [MessageHandler(Filters.text, complete_subscription)],
+        FINISHED: [MessageHandler(Filters.text | Filters.regex(r'Paid 💰') | Filters.regex(r'Change wallet 🔙'), complete_subscription)],
         ECHO: [MessageHandler(Filters.text, echo_transfer)],
         CHAT: [MessageHandler(Filters.text & ~Filters.command, start_chat)],
         MENU: [MessageHandler(Filters.text & ~Filters.command, menu)],
@@ -341,7 +341,6 @@ def main():
         dp.add_handler(
             MessageHandler(
                 Filters.text | Filters.command | Filters.regex('^(Back 🔙|Change wallet 🔙)'),
-
                 echo,
             )
         )
