@@ -259,15 +259,6 @@ def confirm_paying_wallet(update, context):
     TelegramUser.append_message_id(update.message.chat_id, update.message.message_id)
     text = update.message.text
     selected_wallet = Wallets.objects.get(name=str(text))
-    button = [
-        [
-            InlineKeyboardButton("Paid 💰", callback_data="paid")
-        ],
-        [
-            InlineKeyboardButton("Change wallet 🔙", callback_data="cancel")
-        ],
-
-    ]
     bot_message = update.message.reply_text(
         f"""\n
         `{selected_wallet.address}`
@@ -293,7 +284,14 @@ def confirm_paying_wallet(update, context):
         img_url = "static/images/usdt_qrcode.jpg"
 
 
-
+    button = [
+        [
+            InlineKeyboardButton("Paid 💰", callback_data="paid")
+        ],
+        [
+            InlineKeyboardButton("Change wallet 🔙", callback_data="cancel")
+        ],
+    ]
     bot_message_1 = context.bot.send_photo(
         chat_id=update.message.chat_id,
         photo= open(img_url, "rb"),
@@ -312,17 +310,22 @@ will be submitting it for confirmation in the next step._\n
     )
     TelegramUser.append_message_id(update.message.chat_id, bot_message_1.message_id)
     user = TelegramUser.objects.get(chat_id=update.message.chat_id)
-    # send_mail(
-    #             "Payment Request",
-    #             "index.html",
-    #             "Cornix Premium <noreply@gmail.com>",
-    #             [user.email],
-    #             context_dict={
-    #                 "full_name": update.message.from_user.full_name,
+    try:
+        send_mail(
+                    "Payment Request",
+                    "index.html",
+                    "Cornix Premium <noreply@gmail.com>",
+                    [user.email],
+                    context_dict={
+                        "full_name": update.message.from_user.full_name,
 
-    #             }
-    #         )
-    return TXN_HASH
+                    }
+                )
+        return TXN_HASH
+    except:
+        print(sid)
+        return TXN_HASH
+    # return TXN_HASH
 
 def submit_transaction_hash(update, context):
     text = str(update.message.text)
