@@ -301,31 +301,30 @@ def confirm_paying_wallet(update, context):
 *Coin:* _{selected_wallet.cryptocurrency.symbol}_
 *address:* _{selected_wallet.address}_
 *Network:* _{selected_wallet.network}_\n
-_Note: Payment is expected to be received within 12hours_\n
-_After payment, you are required to copy the transaction hash as you
-will be submitting it for confirmation in the next step._\n
 """,
         parse_mode= ParseMode.MARKDOWN,
-        reply_markup=InlineKeyboardMarkup(button),
     )
     TelegramUser.append_message_id(update.message.chat_id, bot_message_1.message_id)
     user = TelegramUser.objects.get(chat_id=update.message.chat_id)
-    try:
-        send_mail(
-                    "Payment Request",
-                    "index.html",
-                    "Cornix Premium <noreply@gmail.com>",
-                    [user.email],
-                    context_dict={
-                        "full_name": update.message.from_user.full_name,
-
-                    }
-                )
-        return TXN_HASH
-    except:
-        print(sid)
-        return TXN_HASH
-    # return TXN_HASH
+    bot_message_2 = context.bot.send_message(
+        chat_id=update.message.chat_id,
+        text= f"""_Note: Payment is expected to be received within 12hours_\n
+_After payment, you are required to copy the transaction hash as you
+will be submitting it for confirmation in the next step._\n""",
+        reply_markup=InlineKeyboardMarkup(button),
+        parse_mode= ParseMode.MARKDOWN,
+    )
+    TelegramUser.append_message_id(update.message.chat_id, bot_message_2.message_id)
+    send_mail(
+        "Payment Request",
+        "index.html",
+        "Cornix Premium <noreply@gmail.com>",
+        [user.email],
+        context_dict={
+            "full_name": update.message.from_user.full_nam
+        }
+    )
+    return TXN_HASH
 
 def submit_transaction_hash(update, context):
     text = str(update.message.text)
