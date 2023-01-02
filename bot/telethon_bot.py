@@ -16,7 +16,7 @@ from asgiref.sync import sync_to_async, async_to_sync
 
 api_id= config("API_ID", cast = int) # You can get api_hash and api_id by creating an app on
 api_hash = config("API_HASH") # my.telegram.org/apps (needed if you use MTProto instead of BotAPI)
-BOT_TOKEN = config("BOT_TOKEN") #bot token
+BOT_TOKEN = config("BOT_TOKEN") # bot token
 
 from azure.common.credentials import ServicePrincipalCredentials
 from azure.mgmt.resource import ResourceManagementClient
@@ -38,35 +38,10 @@ credentials = ClientSecretCredential(
 resource_client = ResourceManagementClient(credentials,subscription_id)
 web_client = WebSiteManagementClient(credentials,subscription_id)
 media_file_path = None
-# #restart your azure web app
-# web_client.web_apps.restart("your_resourceGroup_name","your_web_app_name")
-
-
-
-# async def start():
-#     user_chat = await sync_to_async(TelegramSettings.objects.get, thread_sensitive=True)(chat_id="698485392")
-#     user_chat_id = user_chat.chat_id
-#     user_message_id = user_chat.message_id
-#     await client.delete_messages(int(user_chat_id),user_message_id,revoke=True)
 
 
 # client = TelegramClient("session/session-master1", api_id, api_hash)
-client_1 = TelegramClient("session/session-master", api_id, api_hash).start(bot_token=BOT_TOKEN)
-
-
-
-# @client.on(events.NewMessage(pattern=r"/help"))
-# async def start(event):
-    
-#     user_chat = await sync_to_async(TelegramSettings.objects.get, thread_sensitive=True)(chat_id=event.message.chat_id)
-#     us    er_chat_id = user_chat.chat_id
-#     user_message_id = user_chat.message_id
-#     await client.delete_messages(int(user_chat_id),user_message_id,revoke=True)
-
-
-# @client.on(events.NewMessage(chats=("Test Channel")))
-# async def start(event):
-#     print(event.raw_text)
+client_1 = TelegramClient("session/session-main", api_id, api_hash).start(bot_token=BOT_TOKEN)
 
 
 @client_1.on(events.NewMessage())
@@ -81,8 +56,8 @@ async def handler(event):
     if (event.chat.title == "Test Channel" and auto_send.auto_send and "#BULLISHHH" in event.raw_text):
         text = auto_send.auto_send_text
         if media_file_path is None:
-            await client_1.send_message("https://t.me/testgroupchanneltrial", f"{text}")
-        await client_1.send_file("https://t.me/testgroupchanneltrial", file = media_file_path)
+            await client_1.send_message("https://t.me/+2L_GPBvxsOA0MzZk", f"{text}")
+        await client_1.send_file("https://t.me/+2L_GPBvxsOA0MzZk", file = media_file_path)
         
 @client_1.on(events.NewMessage(pattern=r"/start"))
 async def start(event):
@@ -107,8 +82,8 @@ async def message(event):
         response = await conv.get_response()
         media_file_path = response.media
         if response.media is None:
-            await client_1.send_message("https://t.me/testgroupchanneltrial", f"{response.text}", buttons=[[Button.url("Cornix Premium Bot", "https://t.me/cornix_premuim_Bot")]])
-        await client_1.send_file("https://t.me/testgroupchanneltrial", file = response.media, caption=f"{response.text}",buttons=[[Button.url("Cornix Premium Bot", "https://t.me/cornix_premuim_Bot")]])
+            await client_1.send_message("https://t.me/+2L_GPBvxsOA0MzZk", f"{response.text}", buttons=[[Button.url("Cornix Premium Bot", "https://t.me/cornix_premuim_Bot")]])
+        await client_1.send_file("https://t.me/+2L_GPBvxsOA0MzZk", file = response.media, caption=f"{response.text}",buttons=[[Button.url("Cornix Premium Bot", "https://t.me/cornix_premuim_Bot")]])
         await conv.send_message("Message sent successfully")
         await start(event)
 
@@ -200,61 +175,5 @@ async def payment(event):
         await start(event)
 
 
-
-
-# @client_1.on(events.NewMessage())
-# async def handler(event):
-#   if (event.chat.title == "BitCoin Price (Live)"):
-#     text = event.raw_text 
-#     print(text)
-    ##parse your text
-    # await client_1.send_message("https://t.me/testgroupchanneltrial", text)
-
 with client_1:
     client_1.run_until_disconnected()
-
-# with client:
-#     client.run_until_disconnected()
-
-
-    
-
-
-
-
-
-
-
-# async def main():
-#     await client.run_until_disconnected()
-#     dialogs = await client.get_dialogs(5)
-#     for dialog in dialogs:
-#         if dialog.name == 'Alexanda_bot':
-#             await client.delete_dialog(dialog.name, revoke=True)
-#             print(f"Deleteda {dialog.name}")
-#             time.sleep(1)
-
-
-
-
-
-
-# if __name__ == '__main__':
-#     print("Bot started")
-#     client.run_until_disconnected()
-
-
-# with TelegramClient('anon', api_id, api_hash) as Uclient:
-#     # client.loop.run_until_complete(client.send_message('Alexanda_bot', 'Hello, user account sending message trial!'))
-#     user = Uclient.loop.run_until_complete(Uclient.get_entity('+2347037241240'))
-#     # client.loop.run_until_complete(client.delete_dialog('Alexanda_bot',revoke=True))
-#     print(user)
-
-# async def main():
-#     await client.run_until_disconnected()
-#     dialogs = await client.get_dialogs()
-#     for dialog in dialogs:
-#         if dialog.name == 'Alexanda_bot':
-#             await client.delete_dialog(dialog.name, revoke=True)
-#             print(f"Deleted {dialog.name}")
-#             time.sleep(1)
