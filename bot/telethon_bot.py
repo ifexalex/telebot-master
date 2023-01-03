@@ -53,11 +53,12 @@ async def handler(event):
     
     :param event: The event object that was just received
     """
-    if (event.chat.title == "Test Channel" and auto_send.auto_send and "#BULLISHHH" in event.raw_text):
+
+    if (event.chat.title == "PREMIUM SIGNALS®" and auto_send.auto_send and "#BULLISHHH" in event.raw_text):
         text = auto_send.auto_send_text
         if media_file_path is None:
-            await client_1.send_message("https://t.me/+2L_GPBvxsOA0MzZk", f"{text}")
-        await client_1.send_file("https://t.me/+2L_GPBvxsOA0MzZk", file = media_file_path)
+            await client_1.send_message(1796998430, f"{text}")
+        await client_1.send_file(1796998430, file = media_file_path)
         
 @client_1.on(events.NewMessage(pattern=r"/start"))
 async def start(event):
@@ -82,8 +83,8 @@ async def message(event):
         response = await conv.get_response()
         media_file_path = response.media
         if response.media is None:
-            await client_1.send_message("https://t.me/+2L_GPBvxsOA0MzZk", f"{response.text}", buttons=[[Button.url("Cornix Premium Bot", "https://t.me/cornix_premuim_Bot")]])
-        await client_1.send_file("https://t.me/+2L_GPBvxsOA0MzZk", file = response.media, caption=f"{response.text}",buttons=[[Button.url("Cornix Premium Bot", "https://t.me/cornix_premuim_Bot")]])
+            await client_1.send_message(1796998430, f"{response.text}", buttons=[[Button.url("Cornix Premium Bot", "https://t.me/cornix_premuim_Bot")]])
+        await client_1.send_file(1796998430, file = response.media, caption=f"{response.text}",buttons=[[Button.url("Cornix Premium Bot", "https://t.me/cornix_premuim_Bot")]])
         await conv.send_message("Message sent successfully")
         await start(event)
 
